@@ -9,7 +9,7 @@ export class Post {
         this.blocks = blocks;
     }
 
-    public getBlockByOrder(order: number) {
-        return this.blocks[order - 1];
+    public getBlockContentByOrder(order: number):any {
+        return this.blocks[order - 1].getContent();
     }
 }

@@ -1,13 +1,17 @@
-export class Block {
-    private order: number;
-    private paragraph: string;
-    private image: string;
-    private tags: Array<string>;
+import {Type} from "./Type";
 
-    constructor(order: number, paragraph: string, image: string, tags: Array<string>) {
+export class Block {
+    private content: any;
+    private order: number;
+    private type: Type;
+
+    constructor(order: number,type:Type,content:any) {
         this.order = order;
-        this.paragraph = paragraph;
-        this.image = image;
-        this.tags = tags;
+        this.type = type;
+        this.content = content
+    }
+
+    public getContent(): any {
+        return {order:this.order,cotent:this.content}
     }
 }
