@@ -1,6 +1,6 @@
 import { Block } from "./Block";
 
-export class Content {
+export class Post {
     private title: string;
     private blocks: Array<Block>;
 
