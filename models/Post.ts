@@ -17,10 +17,6 @@ export class Post {
         return this.blocks[blockOrder - 1].getType()
     }
     public getAllBlocksType():Array<string> {
-        let typeArray:Array<string> = [];
-        this.blocks.forEach((block) => {
-            typeArray.push(block.getType())
-        })
-        return typeArray;
+        return this.blocks.map(block => block.getType());
     }
 }
