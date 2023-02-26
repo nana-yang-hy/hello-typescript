@@ -9,7 +9,18 @@ export class Post {
         this.blocks = blocks;
     }
 
-    public getBlockContentByOrder(order: number):any {
+    public getBlockContentByOrder(order: number): any {
         return this.blocks[order - 1].getContent();
+    }
+
+    public getTypeFromBlock(blockOrder: number) {
+        return this.blocks[blockOrder - 1].getType()
+    }
+    public getAllBlocksType():Array<string> {
+        let typeArray:Array<string> = [];
+        this.blocks.forEach((block) => {
+            typeArray.push(block.getType())
+        })
+        return typeArray;
     }
 }
