@@ -1,8 +1,8 @@
-import {Post} from "./models/Post";
-import {ImageBlock} from "./models/ImageBlock";
-import {ParagraphBlock} from "./models/ParagraphBlock";
-import {TagsBlock} from "./models/TagsBlock";
-import {StickerBlock} from "./models/StickerBlock";
+import {Post} from "../src/models/Post";
+import {ImageBlock} from "../src/models/ImageBlock";
+import {ParagraphBlock} from "../src/models/ParagraphBlock";
+import {TagsBlock} from "../src/models/TagsBlock";
+import {StickerBlock} from "../src/models/StickerBlock";
 
 let image1 = new ImageBlock(1,  "picture...")
 let paragraph1 = new ParagraphBlock(2,"letter..." )
