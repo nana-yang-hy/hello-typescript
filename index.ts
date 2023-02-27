@@ -1,13 +1,14 @@
 import {Post} from "./models/Post";
-import {Block} from "./models/Block";
-import { Type } from "./models/Type"
+import {ImageBlock} from "./models/ImageBlock";
+import {ParagraphBlock} from "./models/ParagraphBlock";
+import {TagsBlock} from "./models/TagsBlock";
 
-let block1 = new Block(1,Type.image,  "picture...")
-let block2 = new Block(2,Type.paragraph ,"letter..." )
-let block3 = new Block(3,Type.tags, ["hashtag", "hashtag2"])
-let block4 = new Block(4,Type.image,"picture2...")
+let image1 = new ImageBlock(1,  "picture...")
+let paragraph1 = new ParagraphBlock(2,"letter..." )
+let tags1 = new TagsBlock(3, ["hashtag", "hashtag2"])
+let image2 = new ImageBlock(4,"picture2...")
 
-let post1 = new Post("My First Writing", [block1,block2,block3,block4]);
+let post1 = new Post("My First Writing", [image1,paragraph1,tags1,image2]);
 
 console.log(post1.getAllBlocksType()); //拿到全部block的type
 
