@@ -22,6 +22,8 @@ export class Block {
             return "this is paragraph"
         }else if(this.type==BlockType.tags){
             return "this is tags"
+        }else if(this.type==BlockType.sticker){
+            return "this is sticker"
         }
         return "error"
     }
