@@ -5,4 +5,7 @@ export class StickerBlock extends Block{
     constructor(order:number,content:string) {
         super(order,BlockType.sticker,content);
     }
+    getType(): string {
+        return "this is sticker";
+    }
 }

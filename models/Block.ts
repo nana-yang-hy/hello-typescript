@@ -1,6 +1,6 @@
 import {BlockType} from "./BlockType";
 
-export class Block {
+export abstract class Block {
     private content: any;
     private order: number;
     private type: BlockType;
@@ -15,16 +15,6 @@ export class Block {
         return {order:this.order,content:this.content}
     }
 
-    public getType():string{
-        if(this.type==BlockType.image){
-            return "this is image"
-        }else if(this.type==BlockType.paragraph){
-            return "this is paragraph"
-        }else if(this.type==BlockType.tags){
-            return "this is tags"
-        }else if(this.type==BlockType.sticker){
-            return "this is sticker"
-        }
-        return "error"
-    }
+    public abstract getType():string;
+
 }
