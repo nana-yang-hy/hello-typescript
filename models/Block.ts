@@ -1,13 +1,17 @@
-export class Block{
-    "order":number;
-    "paragraph":string;
-    "image":string;
-    "tags":Array<string>;
+import {Type} from "./Types";
 
-    constructor(order:number,paragraph:string,image:string,tags:Array<string>) {
+export abstract class Block{
+    order:number;
+    content:any;
+    type:Type;
+
+
+
+    constructor(order:number,type:Type,content:any) {
         this.order = order;
-        this.paragraph = paragraph;
-        this.image = image;
-        this.tags = tags;
+        this.type = type;
+        this.content = content;
+
     }
+    public abstract getType():void;
 }

@@ -1,9 +1,9 @@
 import {Block} from "./Block";
 
-export class Content
+export class Post
 {
-    "title": string;
-    private "blocks": Array<Block>;
+    private title: string;
+    private blocks: Array<Block>;
     constructor(myTitle: string, blocks:Array<Block>) {
         this.title = myTitle;
         this.blocks = blocks;
@@ -11,5 +11,9 @@ export class Content
 
     public getBlockByOrder(order:number) {
         return this.blocks[order-1];
+    }
+    public getAllBlockType(){
+        let result = this.blocks.map(block => block.getType());
+        return result
     }
 }
