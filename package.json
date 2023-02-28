@@ -2,11 +2,11 @@
   "name": "hello-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.spec.js",
+  "main": "models/test/index.spec.js",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- index.spec.ts",
-    "build": "tsc index.spec.ts",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- models/test/index.spec.ts",
+    "build": "tsc models/test/index.spec.ts",
     "test": "vitest"
   },
   "author": "",

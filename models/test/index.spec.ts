@@ -1,9 +1,9 @@
-import {Post} from "./models/Post";
+import {Post} from "../src/Post";
 import {expect, test} from "vitest";
-import {ImageBlock} from "./models/ImageBlock";
-import {ParagraphBlock} from "./models/ParagraphBlock";
-import {TagsBlock} from "./models/TagsBlock";
-import {StickerBlock} from "./models/StickerBlock";
+import {ImageBlock} from "../src/ImageBlock";
+import {ParagraphBlock} from "../src/ParagraphBlock";
+import {TagsBlock} from "../src/TagsBlock";
+import {StickerBlock} from "../src/StickerBlock";
 
 test("test get all BlockType", () => {
     let image1 = new ImageBlock(1, "picture...");
